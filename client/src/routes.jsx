@@ -20,13 +20,12 @@ import DoctorDashboard from "./components/Doctor";
 import DoctorAppointments from "./pages/DoctorAppointments";
 import DoctorConsultation from "./pages/DoctorConsultation";
 import DoctorProfile from "./pages/DoctorProfile";
-import Doctor from "./components/Doctor";
-
 import Medicines from "./pages/Medicines";
 
 const routes = createBrowserRouter([
     {
         path: "/",
+        element: <RoleLayout />,
         errorElement: <Error />,
         children: [
             {
