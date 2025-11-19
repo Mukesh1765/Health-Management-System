@@ -1,0 +1,210 @@
+/* ----------------------------------------------------- */
+/* PAGE */
+/* ----------------------------------------------------- */
+.doctor-dashboard-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fafafa;
+    padding-bottom: 40px;
+}
+
+/* ----------------------------------------------------- */
+/* MAIN LAYOUT */
+/* ----------------------------------------------------- */
+.doctor-dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+/* Desktop → 2 columns layout */
+@media (min-width: 900px) {
+    .doctor-dashboard-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ----------------------------------------------------- */
+/* CARDS (FLAT, NO RADIUS, NO BORDER) */
+/* ----------------------------------------------------- */
+.dd-card {
+    background: #ffffff;
+    padding: 20px;
+}
+
+/* ----------------------------------------------------- */
+/* TITLES */
+/* ----------------------------------------------------- */
+.dd-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 16px;
+}
+
+/* Mobile size */
+@media (max-width: 480px) {
+    .dd-card-title {
+        font-size: 17px;
+    }
+}
+
+/* ----------------------------------------------------- */
+/* OVERVIEW GRID */
+/* ----------------------------------------------------- */
+.dd-stats-card {
+    grid-column: 1 / -1;
+    /* full width row on desktop */
+}
+
+.dd-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* Tablets */
+@media (max-width: 750px) {
+    .dd-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .dd-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dd-stat {
+    background: #e1f6fd;
+    padding: 16px;
+}
+
+.dd-stat-label {
+    color: #444;
+    font-size: 14px;
+}
+
+.dd-stat-value {
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* ----------------------------------------------------- */
+/* LISTS */
+/* ----------------------------------------------------- */
+.dd-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.dd-row {
+    background: #e1f6fd;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* Hover effect WITHOUT borders */
+.dd-row:hover {
+    background: #e6e6e6;
+}
+
+/* Mobile stacked */
+@media (max-width: 550px) {
+    .dd-row {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+}
+
+.dd-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+}
+
+.dd-meta {
+    font-size: 13px;
+    color: #555;
+    margin-top: 2px;
+}
+
+/* ----------------------------------------------------- */
+/* STATUS TAGS (FLAT COLORS) */
+/* ----------------------------------------------------- */
+.dd-status {
+    padding: 6px 10px;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #000;
+}
+
+/* Flat color categories */
+.dd-status.pending,
+.dd-status.confirmed {
+    background: #dbe3ff;
+    color: #1a3c98;
+}
+
+.dd-status.completed {
+    background: #d9f5dd;
+    color: #1f6a35;
+}
+
+.dd-status.cancelled {
+    background: #ffd8d8;
+    color: #9b1d1d;
+}
+
+/* ----------------------------------------------------- */
+/* BUTTON: View All */
+/* ----------------------------------------------------- */
+.dd-view-btn {
+    background: none;
+    color: #175bcb;
+    padding: 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dd-view-btn:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------- */
+/* EMPTY STATE */
+/* ----------------------------------------------------- */
+.dd-empty {
+    text-align: center;
+    padding: 28px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ----------------------------------------------------- */
+/* MOBILE TUNING */
+/* ----------------------------------------------------- */
+@media (max-width: 450px) {
+    .doctor-dashboard-container {
+        padding: 12px;
+    }
+
+    .dd-card {
+        padding: 16px;
+    }
+
+    .dd-stat-value {
+        font-size: 18px;
+    }
+}

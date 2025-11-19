@@ -1,0 +1,116 @@
+/* Wrapper */
+.doctor-profile-wrapper {
+    padding: 24px;
+    max-width: 1100px;
+    margin: auto;
+    font-family: system-ui, sans-serif;
+    color: #222;
+}
+
+/* Topbar */
+.dp-topbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.dp-back {
+    background: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: #333;
+}
+
+.dp-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Layout */
+.dp-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 28px;
+}
+
+/* Cards */
+.dp-card {
+    padding: 20px;
+    background: #fafafa;
+}
+
+/* name */
+.dp-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Info list */
+.dp-info p {
+    margin: 6px 0;
+}
+
+/* Edit Form */
+.dp-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.dp-field label {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.dp-field input,
+.dp-field textarea {
+    padding: 8px;
+    background: white;
+    font-size: 14px;
+    color: #222;
+}
+
+.dp-row {
+    display: flex;
+    gap: 14px;
+}
+
+/* Buttons */
+.dp-edit-btn,
+.dp-save,
+.dp-cancel,
+.dp-link-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+}
+
+.dp-cancel {
+    background: #999;
+}
+
+.dp-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* Side card */
+.side-card h4 {
+    margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .dp-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,181 @@
+/* src/styles/book.css */
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.page-center {
+    width: 92%;
+    max-width: 1100px;
+    margin: 24px auto;
+}
+
+.container-wide {
+    width: 100%;
+}
+
+.top-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.back-btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 12px;
+    background: #eaf4ff;
+    border: 1px solid #c9e2ff;
+    color: #1b63b8;
+    cursor: pointer;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1b3f66;
+}
+
+.book-layout {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 18px;
+    align-items: start;
+}
+
+@media (max-width: 920px) {
+    .book-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Doctor info left column */
+.doctor-info {
+    display: flex;
+    gap: 18px;
+    border: 1px solid #d8eafc;
+    background: #fff;
+    padding: 18px;
+}
+
+.photo-spot-lg {
+    width: 150px;
+    height: 150px;
+    background: #eaf4ff;
+    border: 1px solid #d0e7ff;
+}
+
+.info-col h2 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    color: #133a63;
+}
+
+.special {
+    color: #3f6b90;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #3d5e7a;
+}
+
+.fee-row {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.fee {
+    font-weight: 700;
+    color: #133a63;
+}
+
+.available-tag {
+    padding: 4px 8px;
+    border: 1px solid #bfdcff;
+    background: #f2faff;
+    color: #2b6fb0;
+    font-weight: 600;
+}
+
+/* Form card right column */
+.form-card {
+    border: 1px solid #d8eafc;
+    padding: 18px;
+    background: white;
+}
+
+.form-section-title {
+    font-weight: 700;
+    color: #10385d;
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #4b6f8f;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cfdfee;
+    outline: none;
+    font-size: 14px;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.row>div {
+    flex: 1;
+}
+
+/* Buttons */
+.form-actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+}
+
+.submit-btn {
+    background: #1b63b8;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.cancel-btn {
+    background: #f1f1f1;
+    color: #444;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+/* Loading */
+.loading-screen {
+    padding: 40px;
+    text-align: center;
+    color: #555;
+}

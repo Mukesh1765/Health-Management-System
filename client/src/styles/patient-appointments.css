@@ -1,0 +1,308 @@
+/* src/styles/patient-appointments.css */
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Page wrapper */
+.appointments-page {
+    max-width: 980px;
+    margin: 20px auto;
+    padding: 12px;
+    color: #203344;
+}
+
+/* Top row */
+.appt-top-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #f2f8ff;
+    border: 1px solid #d7eafd;
+    color: #0e4a7a;
+    cursor: pointer;
+}
+
+.page-heading {
+    margin: 0;
+    font-size: 20px;
+    color: #0b3b5a;
+}
+
+.book-new-btn {
+    background: #0b66b3;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Filter bar */
+.appt-filter-bar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.search-box {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 10px;
+    border: 1px solid #d7eafd;
+    background: #f8fbff;
+    flex: 1;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #203344;
+}
+
+.available-btn {
+    padding: 8px 12px;
+    border: 1px solid #d7eafd;
+    background: #f8fbff;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0b3b5a;
+}
+
+.available-btn.active {
+    background: #e2f2ff;
+    border-color: #9ed0ff;
+}
+
+/* Tabs */
+.appt-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.tab-btn {
+    padding: 8px 12px;
+    background: #f4f7fb;
+    border: 1px solid #e0e8f2;
+    cursor: pointer;
+    color: #23485e;
+    font-weight: 600;
+}
+
+.tab-btn.active {
+    background: #0b66b3;
+    color: #fff;
+    border-color: #0b66b3;
+}
+
+/* Appointment list */
+.appointment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Card */
+.appt-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px;
+    border: 1px solid #e6eef7;
+    background: #fff;
+}
+
+.left-block {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.photo-spot-sm {
+    width: 62px;
+    height: 62px;
+    background: #eaf4ff;
+    border: 1px solid #d7eafd;
+    flex-shrink: 0;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.doctor-name {
+    margin: 0;
+    font-size: 16px;
+    color: #0b3b5a;
+}
+
+.online-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.online-dot.online {
+    background: #2ecc71;
+    /* green */
+    box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.08);
+}
+
+.online-dot.offline {
+    background: #bfc7cf;
+    /* gray */
+}
+
+/* meta */
+.spec {
+    margin: 0;
+    font-size: 13px;
+    color: #486378;
+}
+
+.dt {
+    margin: 0;
+    font-size: 13px;
+    color: #2f556e;
+}
+
+.reason {
+    margin: 0;
+    font-size: 13px;
+    color: #394b57;
+}
+
+/* right block */
+.right-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    min-width: 120px;
+}
+
+.status-tag {
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+/* status colors */
+.status-tag.pending {
+    background: #fff7e6;
+    color: #a76100;
+}
+
+.status-tag.approved,
+.status-tag.upcoming {
+    background: #e6f6ff;
+    color: #0b66b3;
+}
+
+.status-tag.completed {
+    background: #e8f5ea;
+    color: #1b7a35;
+}
+
+.status-tag.cancelled {
+    background: #fdecea;
+    color: #a12b2b;
+}
+
+/* cancel button */
+.cancel-btn {
+    background: #f54242;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* empty and loading */
+.empty-state,
+.loading-screen {
+    text-align: center;
+    padding: 28px;
+    color: #5a6b76;
+}
+
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 4px solid #d7eafd;
+    border-top-color: #0b66b3;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.empty-book-btn {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: #0b66b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* responsive */
+@media (max-width: 820px) {
+    .appt-top-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .appt-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .appt-tabs {
+        flex-wrap: wrap;
+    }
+
+    .right-block {
+        align-items: flex-start;
+    }
+
+    .appt-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

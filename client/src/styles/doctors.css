@@ -1,0 +1,168 @@
+/* PAGE LAYOUT */
+.doctor-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    color: #1d2d3a;
+    font-family: system-ui, sans-serif;
+}
+
+/* HEADER */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-row h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f3d73;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid #b9c8dd;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* SEARCH BOX */
+.search-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #bfd3ea;
+    font-size: 14px;
+    background: #fff;
+}
+
+.avail-filter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #335;
+    font-size: 14px;
+}
+
+/* GRID */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+    gap: 18px;
+}
+
+/* CARD */
+.doctor-card {
+    border: 1px solid #d8e3f0;
+    padding: 16px;
+    background: #f9fbfe;
+    display: flex;
+    gap: 14px;
+}
+
+/* IMAGE */
+.photo {
+    width: 80px;
+    height: 80px;
+    background: #d5e3f5;
+}
+
+/* CARD CONTENT */
+.doc-right {
+    flex: 1;
+}
+
+.row-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doc-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* STATUS DOT */
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.on {
+    background: #2ecc71;
+}
+
+.dot.off {
+    background: #bdc3c7;
+}
+
+.spec {
+    margin-top: 4px;
+    color: #436;
+    font-size: 14px;
+}
+
+.exp {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 14px;
+}
+
+/* BOOK BTN */
+.book-btn {
+    padding: 8px 12px;
+    border: none;
+    background: #1f3d73;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background: #182f59;
+}
+
+/* EMPTY */
+.no-results {
+    text-align: center;
+    color: #555;
+    padding: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .doctor-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .row-between {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .search-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .book-btn {
+        width: 100%;
+    }
+}
